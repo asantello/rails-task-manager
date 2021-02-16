@@ -1,0 +1,15 @@
+<h1>Edit <%= @task.title %></h1>
+
+<%# Existing object, so build a PUT form to update one %>
+<%= form_for @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :details %>
+  <%= f.number_field :details %>
+  <br>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <br>
+  <%= f.submit %>
+<% end %>
