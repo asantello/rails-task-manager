@@ -11,7 +11,11 @@
         <% else %>
           <i class="far fa-square"></i>
         <% end %>
-          <%= link_to task.title, task_path(task) %>
+          <%= link_to task.title, task_path(task) %> |
+          <%= link_to "🗑",
+              task_path(task),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
         </li>
     <% end %>
   </ul>
@@ -20,3 +24,4 @@
 <div>
   <%= link_to "Create a new task", new_task_path %>
 </div>
+
